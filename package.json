@@ -12,13 +12,18 @@
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0"
   },
+  "homepage": "https://Tony-Felix.github.io/projetos/Pixel-Art",
   "scripts": {
     "test": "cypress run",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "dependencies": {
-    "eslint-config-trybe-fundamentals": "^1.1.1"
+    "eslint-config-trybe-fundamentals": "^1.1.1",
+    "gh-pages": "^6.1.1"
   }
 }

@@ -55,6 +55,7 @@ idBotao.addEventListener('click', limpaQuadro);
 // CRIA IMPUT
 const input = document.createElement('input');
 input.id = 'board-size';
+input.placeholder = "DIGITE O TAMANHO DESEJADO AQUI"
 body.insertBefore(input, terceiroFilho);
 const idInput = document.getElementById('board-size');
 idInput.type = 'number';

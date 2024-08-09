@@ -7,7 +7,7 @@
 
 .color {
 	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.534);
-	border-radius: 50% 10% 50% 10%/ 10% 50% 10% 50%;
+	border-radius: 20% 20% 20% 20%/ 20% 20% 20% 20%;
 	margin: 10px;
 	border: 1px solid black;
 	display: inline-block;
@@ -18,6 +18,9 @@
 #pixel-board {
   border-color: 1px black;
   border-style: solid;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pixel {
@@ -28,11 +31,18 @@
   height: 40px;
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.534);
-	border-radius: 50% 10% 50% 10%/ 10% 50% 10% 50%;
+	border-radius: 20% 20% 20% 20%/ 20% 20% 20% 20%;
 }
 
 body {
   background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+body > :not(:first-child) {
+  /* Estilos para os elementos que não são o primeiro filho */
+  flex: 1; /* Faz com que os elementos ocupem o espaço disponível igualmente */
 }
 
 h1 {
@@ -73,6 +83,7 @@ h1 {
 
 #board-size {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.534);
-	border-radius: 50% 10% 50% 10%/ 10% 50% 10% 50%;
+	border-radius: 20% 20% 20% 20%/ 20% 20% 20% 20%;
   background-color: #eae23f;
+  text-align: center
 }
