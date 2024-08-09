@@ -124,13 +124,14 @@ const recuperaTamanho = () => {
   }
 };
 recuperaTamanho();
-// CAREGA QUADRO SALVO
+// CARREGA QUADRO SALVO
 const recuperaQuadroPintado = () => {
   if (localStorage.getItem('pixelBoard')) {
     const pixelBoard = localStorage.getItem('pixelBoard');
     const idPixelBord = document.querySelector('#pixel-board');
     idPixelBord.innerHTML = pixelBoard;
   }
+  clickOnPixels()
 };
 recuperaQuadroPintado();
 // CRIA QUADRO DE PIXELS
@@ -152,7 +153,12 @@ for (let index = 0; index < colorClass.length; index += 1) {
   const element = colorClass[index];
   element.addEventListener('click', colorSelect);
 }
-
+// CRIA BOTÃO VQV
+const botao3 = document.createElement('button');
+botao3.innerText = 'Tamanho-Do-Quadro';
+body.insertBefore(botao3, terceiroFilho);
+botao3.id = 'generate-board';
+const idbotao3 = document.getElementById('generate-board');
 // CRIA BOTÃO CORES ALEATÓRIAS
 const botao2 = document.createElement('button');
 botao2.innerText = 'Cores aleatórias';
@@ -168,13 +174,6 @@ const coresAleatorias = () => {
   }
 };
 botao2.addEventListener('click', coresAleatorias);
-
-// CRIA BOTÃO VQV
-const botao3 = document.createElement('button');
-botao3.innerText = 'VQV';
-body.insertBefore(botao3, terceiroFilho);
-botao3.id = 'generate-board';
-const idbotao3 = document.getElementById('generate-board');
 // LIMITE DE DIMENSAO DO QUADRO
 const limiteQuadro = () => {
   if (idInput.value < 5 && idInput.value !== '') {
